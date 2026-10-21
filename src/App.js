@@ -16,6 +16,7 @@ const App = () => {
   useEffect(() => {
     const controller = new AbortController();
 
+    
     axios.get('/data/books.json', { signal: controller.signal })
       .then((res) => {
         setBooks(res.data);
